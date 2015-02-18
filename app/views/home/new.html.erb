@@ -1,0 +1,17 @@
+<h1>Upload an image</h1>
+
+<%= form_for @photo, url: '/home' do |f| %>
+	<div class="input">
+		<%= f.label :name %>
+		<%= f.text_field :name, placeholder: 'Your Name' %>
+	</div>
+	<div class="input">
+		<%= f.label :image %>
+		<%= f.file_field :image %>
+	</div>
+	<div class="input">
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+	</div>
+	<%= f.submit :submit %>
+<% end %>
